@@ -10,7 +10,6 @@ import Link from "next/link";
 import FormattedPrice from "./formatedPrice";
 
 const CartContainer = () => {
-  // Ensure cart is properly initialized with a default value
   const { cart = [] } = useSelector((state: StoreState) => state?.shoppers || {});
   const dispatch = useDispatch();
 
@@ -56,15 +55,15 @@ const CartContainer = () => {
             <div className="w-96 flex flex-col gap-4">
               <div>
                 <h1 className="text-2xl font-semibold text-center">Cart Totals</h1>
-                  <p className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 px-4 text-lg font-medium">
+                  <div className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 px-4 text-lg font-medium">
                     Sub Total <FormattedPrice amount={250} />
-                  </p>
-                  <p className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 px-4 text-lg font-medium">
+                  </div>
+                  <div className="flex items-center justify-between border-[1px] border-gray-400 border-b-0 py-1.5 px-4 text-lg font-medium">
                     Shipping Charges <FormattedPrice amount={250} />
-                  </p>
-                  <p className="flex items-center justify-between border-[1px] border-gray-400 border-b-1 py-1.5 px-4 text-lg font-medium">
+                  </div>
+                  <div className="flex items-center justify-between border-[1px] border-gray-400 border-b-1 py-1.5 px-4 text-lg font-medium">
                     Total <FormattedPrice amount={500} />
-                  </p>
+                  </div>
                
               </div>
               <button
